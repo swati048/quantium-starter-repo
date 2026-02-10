@@ -22,11 +22,11 @@ for file in files:
     df["quantity"] = pd.to_numeric(df["quantity"])
 
     # Create Sales column
-    df["Sales"] = df["quantity"] * df["price"]
+    df["sales"] = df["quantity"] * df["price"]
 
     # Keep required fields
-    df = df[["Sales", "date", "region"]]
-    df.columns = ["Sales", "Date", "Region"]
+    df = df[["sales", "date", "region"]]
+    df.columns = ["sales", "date", "region"]
 
     dfs.append(df)
 
